@@ -1,0 +1,351 @@
+body {
+  height: 100%;
+}
+body {
+  display: block;
+  margin: 8px;
+}
+#container1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px;
+  height: 60px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+#container1 a {
+  text-decoration: none;
+  color: #5f6368;
+  font-size: 14px;
+  padding: 0px 4px 0px 0px;
+}
+
+#container1 a:hover {
+  text-decoration: underline;
+}
+
+#inner-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 48px;
+  width: auto;
+  padding: 8px;
+}
+
+#container1 .menu {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0px 4px 0px 0px;
+}
+
+#container1 .menu a {
+  padding: 0 8px;
+  font-weight: bold;
+}
+
+div {
+  display: block;
+  unicode-bidi: isolate;
+}
+
+#gmail{
+  font-family: arial, sans-serif;
+  line-height: normal;
+}
+
+#img{
+  font-family: arial, sans-serif;
+  line-height: normal;
+    display: inline-block;
+    padding-left: 15px;
+}
+
+#g_apps{
+  display: inline-block;
+  padding-left: 15px;
+}
+
+#enter{
+  font-family: arial, sans-serif;
+  line-height: normal;
+  display: inline-block;
+  padding-left: 15px;
+}
+#enter a {
+  background-color: #4285f4;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#enter a:hover {
+  background-color: #357ae8;
+}
+
+/*#container1 .menu img {*/
+/*  margin-left: 8px;*/
+/*}*/
+
+.google-apps-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  color: #5f6368;
+  transition: transform 0.2s ease-in-out;
+}
+
+.google-apps-icon:hover {
+  transform: scale(1.1);
+}
+
+#logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20vh;
+}
+
+#logo-container img {
+  max-width: 45%;
+  height: auto;
+}
+
+#search-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 90%;
+  width: 600px;
+  height: 48px;
+  border: 1px solid #dfe1e5;
+  border-radius: 24px;
+  padding: 0 16px;
+  margin: 0 auto;
+}
+
+#search-bar input {
+  border: none;
+  outline: none;
+  flex: 1;
+  font-size: 16px;
+  color: #202124;
+  margin-left: 8px;
+}
+
+#clavaSearchButton{
+  background: url('/assets/Pasted Graphic.png') no-repeat center;
+  background-size: contain;
+  width: 24px;
+  height: 24px;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+#clavaSearchButton:hover {
+  transform: scale(1.1);
+}
+
+/* Локальна іконка пошуку */
+#search-icon-button {
+  background: url('https://www.gstatic.com/images/icons/material/system/2x/search_black_24dp.png') no-repeat center;
+  background-size: contain;
+  width: 24px;
+  height: 24px;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+#search-icon-button:hover {
+  transform: scale(1.1);
+}
+
+/* Кнопка голосового пошуку */
+#voiceSearchButton {
+  background: url('/assets/google_mic_logo_icon_159335.png') no-repeat center;
+  background-size: contain;
+  width: 24px;
+  height: 24px;
+  border: none;
+  cursor: pointer;
+  margin-left: 8px;
+  transition: transform 0.2s ease;
+}
+
+#voiceSearchButton:hover {
+  transform: scale(1.1);
+}
+
+/* Кнопка Google Lens */
+#lensSearchButton {
+  background: url('/assets/google_lens_logo_icon_159340.png') no-repeat center;
+  background-size: contain;
+  width: 24px;
+  height: 24px;
+  border: none;
+  cursor: pointer;
+  margin-left: 8px;
+  transition: transform 0.2s ease;
+}
+
+#lensSearchButton:hover {
+  transform: scale(1.1);
+}
+
+#search-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 40vh;
+  text-align: center;
+}
+
+/* Контейнер кнопок під пошуковим рядком */
+#button-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 30px;
+}
+
+/* Оформлення кнопок */
+.search-button, .lucky-button {
+  background-color: #fff ;
+  color: #888888;
+  border: 1px solid #dfe1e5;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-size: 14px;
+  mso-border-shadow: yes;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.search-button:hover, .lucky-button:hover {
+  background-color: #ccc;
+  box-shadow: 0 1px 6px rgba(32, 33, 36, 0.28);
+}
+
+/* Стилі для контейнера вибору мови */
+#language-selector {
+  margin-top: 40px;
+  text-align: center;
+  color: #888888;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  line-height: normal;
+  cursor: pointer;
+}
+
+/* Вибрана мова за замовчуванням */
+#language-selector .selected-language {
+  color: #1a73e8;
+  font-weight: bold;
+  display: inline;
+}
+
+/* Випадаючий список мов */
+.language-dropdown {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+}
+
+.language-option {
+  padding: 5px 10px;
+  display: none;
+  font-size: 14px;
+  color: #1a73e8;
+}
+
+/* При наведенні показується інша мова */
+#language-selector:hover .language-option {
+  display: inline-block;
+  margin-left: 5px;
+}
+
+#language-selector:hover .selected-language {
+  display: none;
+}
+
+#footer-top, #footer-bottom {
+  width: 100%;
+  padding: 10px 40px;
+  background-color: #dfe1e5;
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 60px;
+  flex-wrap: wrap;
+  border-top: 1px solid #ccc;
+  font-size: 14px;
+  font-family: Arial, sans-serif;
+  color: #5f6368;
+}
+
+#footer-bottom a {
+  text-decoration: none;
+  color: #5f6368;
+  padding: 0 20px;
+  transition: color 0.3s;
+}
+
+#footer-bottom a:hover {
+  text-decoration: underline;
+  color: #000;
+}
+
+#footer-top {
+  border-bottom: 0.5px solid #ccc;
+  justify-content: flex-start;
+  bottom: 55px;
+}
+
+#footer-top div {
+  padding-right: 20px;
+  margin: 5px;
+
+}
+
+#footer-top a {
+  text-decoration: none;
+  color: #5f6368;
+  padding: 0 20px;
+  transition: color 0.3s;
+}
+
+#footer-top a:hover {
+  text-decoration: underline;
+  color: #000;
+}
+
+@media screen and (max-width: 600px) {
+  #footer-top, #footer-bottom {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  #footer-bottom a {
+    padding: 5px 0;
+  }
+}
