@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html itemscope="" itemtype="http://schema.org/WebPage" lang="uk" xmlns="http://www.w3.org/1999/html">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Test Oddity</title>
+  <link rel="stylesheet" href="css/style.css">
+
+  <script>
+    function toggleLanguageDropdown() {
+      document.getElementById('language-options').classList.toggle('show');
+    }
+
+    function selectLanguage(language) {
+      document.getElementById('selected-language').textContent = language;
+      document.getElementById('language-options').classList.remove('show');
+    }
+
+    window.onclick = function(event) {
+      if (!event.target.matches('#selected-language')) {
+        var dropdowns = document.getElementsByClassName("language-options");
+        for (var i = 0; i < dropdowns.length; i++) {
+          var openDropdown = dropdowns[i];
+          if (openDropdown.classList.contains('show')) {
+            openDropdown.classList.remove('show');
+          }
+        }
+      }
+    }
+
+    function luckyButtonClick() {
+      const logo = document.getElementById('google-logo');
+      logo.src = 'assets/oddity-1.jpeg';
+      logo.style.transition = 'opacity 3s ease-in-out';
+      logo.style.opacity = '0';
+      setTimeout(() => {
+        logo.style.opacity = '1';
+        window.location.href = 'https://www.google.com/doodles';
+      }, 500);
+    }
+
+    window.addEventListener('pageshow', function(event) {
+      if (event.persisted) {
+        document.getElementById('google-logo').src = 'https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png';
+      }
+    });
+  </script>
+  <style>
+    .language-dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .language-options {
+      display: none;
+      position: relative;
+      background-color: white;
+      border: 1px solid #dfe1e5;
+      border-radius: 4px;
+      padding: 3px;
+      cursor: pointer;
+    }
+
+    .language-options div {
+      padding: 5px 10px;
+      cursor: pointer;
+    }
+
+    .language-options div:hover {
+      background-color: #f1f1f1;
+      color: #4285f4;
+    }
+
+    .show {
+      display: block;
+    }
+
+    #selected-language {
+      color: #1a73e8;
+      font-weight: normal;
+    }
+
+  </style>
+</head>
+<body>
+
+<div id="container1">
+  <div id="inner-container" style="margin-left: auto;">
+    <div id="gmail">
+      <a href="#">Gmail</a>
+    </div>
+    <div id="img">
+      <a href="#">Зображення</a>
+    </div>
+    <div id="g_apps">
+      <a href="#" class="google-apps-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+          <circle cx="5" cy="5" r="2"></circle>
+          <circle cx="12" cy="5" r="2"></circle>
+          <circle cx="19" cy="5" r="2"></circle>
+          <circle cx="5" cy="12" r="2"></circle>
+          <circle cx="12" cy="12" r="2"></circle>
+          <circle cx="19" cy="12" r="2"></circle>
+          <circle cx="5" cy="19" r="2"></circle>
+          <circle cx="12" cy="19" r="2"></circle>
+          <circle cx="19" cy="19" r="2"></circle>
+        </svg>
+      </a>
+    </div>
+    <div id="enter">
+      <a href="#">Увійти</a>
+    </div>
+  </div>
+</div>
+
+<div id="search-section">
+  <div id="logo-container">
+    <img id="google-logo" src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" alt="Google Logo">
+  </div>
+
+  <div id="search-bar">
+    <button id="search-icon-button" class="search-icon" title="Пошук"></button>
+    <input type="text" placeholder="Шукайте в Google або введіть URL-адресу">
+    <button id="clavaSearchButton" class="clava" title="Пошук голосом"></button>
+    <button id="voiceSearchButton" class="mic-icon" title="Пошук голосом"></button>
+    <button id="lensSearchButton" class="lens-icon" title="Пошук за зображенням"></button>
+  </div>
+</div>
+
+<div>
+  <div id="button-container">
+    <button class="search-button">Пошук Google</button>
+    <button class="lucky-button" onclick="luckyButtonClick()">Мені пощастить</button>
+  </div>
+</div>
+
+<div>
+  <div id="language-selector" onclick="toggleLanguageDropdown()">
+    Мова Google: <span id="selected-language">English</span>
+    <div id="language-options" class="language-options">
+      <div onclick="selectLanguage('English')">English</div>
+      <div onclick="selectLanguage('Українська')">Українська</div>
+    </div>
+  </div>
+</div>
+
+
+<div id="footer-top">
+  <div>
+    <a href="#">Україна</a>
+  </div>
+</div>
+<div id="footer-bottom">
+  <div>
+    <a href="#">Про Google</a>
+    <a href="#">Реклама</a>
+    <a href="#">Для бізнесу</a>
+    <a href="#">Як працює Пошук</a>
+  </div>
+  <div>
+    <a href="#">Конфіденційність</a>
+    <a href="#">Умови</a>
+    <a href="#">Налаштування</a>
+  </div>
+</div>
+
+
+</body>
+</html>
